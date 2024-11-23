@@ -1,0 +1,18 @@
+.sw-slider {
+    display: none !important;
+}
+
+.bg-white {
+    display: inline-block;
+    background-color: white;
+    width: 70px !important;
+}
+
+iframe {
+    display: none !important;
+}
+
+.descr {
+    top: 160px !important;
+    left: 30px !important;
+}
