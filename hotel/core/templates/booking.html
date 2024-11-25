@@ -1,4 +1,4 @@
-﻿<html>
+﻿<html xmlns="http://www.w3.org/1999/html">
 <head>
     {% load static %}
     <meta charset="utf-8">
@@ -16,36 +16,52 @@
     <meta http-equiv="x-dns-prefetch-control" content="on">
     <link rel="dns-prefetch" href="https://ws.tildacdn.com">
     <link rel="dns-prefetch" href="https://static.tildacdn.com">
-    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'booking/img/tild3362-3366-4235-a533-633833623230/favicon_black.png' %}"
+    <link rel="icon" type="image/png" sizes="32x32"
+          href="{% static 'booking/img/tild3362-3366-4235-a533-633833623230/favicon_black.png' %}"
           media="(prefers-color-scheme: light)">
-    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'booking/img/tild6632-3830-4464-b635-613536316136/favicon_white.png' %}"
+    <link rel="icon" type="image/png" sizes="32x32"
+          href="{% static 'booking/img/tild6632-3830-4464-b635-613536316136/favicon_white.png' %}"
           media="(prefers-color-scheme: dark)">
-    <link rel="apple-touch-icon" type="image/png" href="{% static 'booking/img/tild3665-3839-4236-b034-376336613166/favicon_black.png' %}">
-    <link rel="icon" type="image/png" sizes="192x192" href="{% static 'booking/img/tild3665-3839-4236-b034-376336613166/favicon_black.png' %}">
+    <link rel="apple-touch-icon" type="image/png"
+          href="{% static 'booking/img/tild3665-3839-4236-b034-376336613166/favicon_black.png' %}">
+    <link rel="icon" type="image/png" sizes="192x192"
+          href="{% static 'booking/img/tild3665-3839-4236-b034-376336613166/favicon_black.png' %}">
     <!-- Assets -->
     <script src="{% static 'booking/js/tilda-fallback-1.0.min.js' %}" async="" charset="utf-8"></script>
-    <link rel="stylesheet" href="{% static 'booking/css/tilda-grid-3.0.min.css' %}" type="text/css" media="all" onerror="this.loaderr='y';">
-    <link rel="stylesheet" href="{% static 'booking/ws/project5868788/tilda-blocks-page30032947.min.css' %}" type="text/css" media="all"
+    <link rel="stylesheet" href="{% static 'booking/css/tilda-grid-3.0.min.css' %}" type="text/css" media="all"
+          onerror="this.loaderr='y';">
+    <link rel="stylesheet" href="{% static 'booking/ws/project5868788/tilda-blocks-page30032947.min.css' %}"
+          type="text/css" media="all"
           onerror="this.loaderr='y';">
     <link rel="stylesheet" href="{% static 'booking/css/tilda-animation-2.0.min.css' %}" type="text/css" media="all"
           onerror="this.loaderr='y';">
+    <link rel="stylesheet" href="{% static 'booking/css/search-cont.css' %}" type="text/css">
     <link rel="stylesheet" type="text/css" href="{% static 'booking/css/custom.css' %}">
     <script nomodule="" src="{% static 'booking/js/tilda-polyfill-1.0.min.js' %}" charset="utf-8"></script>
     <script type="text/javascript">function t_onReady(func) {if(document.readyState!='loading') {func();} else {document.addEventListener('DOMContentLoaded',func);}}
 function t_onFuncLoad(funcName,okFunc,time) {if(typeof window[funcName]==='function') {okFunc();} else {setTimeout(function() {t_onFuncLoad(funcName,okFunc,time);},(time||100));}}function t396_initialScale(t){t=document.getElementById("rec"+t);if(t){t=t.querySelector(".t396__artboard");if(t){var e,r=document.documentElement.clientWidth,a=[];if(i=t.getAttribute("data-artboard-screens"))for(var i=i.split(","),l=0;l<i.length;l++)a[l]=parseInt(i[l],10);else a=[320,480,640,960,1200];for(l=0;l<a.length;l++){var n=a[l];n<=r&&(e=n)}var o="edit"===window.allrecords.getAttribute("data-tilda-mode"),d="center"===t396_getFieldValue(t,"valign",e,a),c="grid"===t396_getFieldValue(t,"upscale",e,a),s=t396_getFieldValue(t,"height_vh",e,a),u=t396_getFieldValue(t,"height",e,a),g=!!window.opr&&!!window.opr.addons||!!window.opera||-1!==navigator.userAgent.indexOf(" OPR/");if(!o&&d&&!c&&!s&&u&&!g){for(var _=parseFloat((r/e).toFixed(3)),f=[t,t.querySelector(".t396__carrier"),t.querySelector(".t396__filter")],l=0;l<f.length;l++)f[l].style.height=Math.floor(parseInt(u,10)*_)+"px";t396_scaleInitial__getElementsToScale(t).forEach(function(t){t.style.zoom=_})}}}}function t396_scaleInitial__getElementsToScale(t){return t?Array.prototype.slice.call(t.children).filter(function(t){return t&&(t.classList.contains("t396__elem")||t.classList.contains("t396__group"))}):[]}function t396_getFieldValue(t,e,r,a){var i=a[a.length-1],l=r===i?t.getAttribute("data-artboard-"+e):t.getAttribute("data-artboard-"+e+"-res-"+r);if(!l)for(var n=0;n<a.length;n++){var o=a[n];if(!(o<=r)&&(l=o===i?t.getAttribute("data-artboard-"+e):t.getAttribute("data-artboard-"+e+"-res-"+o)))break}return l}
     </script>
     <script src="{% static 'booking/js/jquery-1.10.2.min.js' %}" charset="utf-8" onerror="this.loaderr='y';"></script>
-    <script src="{% static 'booking/js/tilda-scripts-3.0.min.js' %}" charset="utf-8" defer="" onerror="this.loaderr='y';"></script>
+    <script src="{% static 'booking/js/tilda-scripts-3.0.min.js' %}" charset="utf-8" defer=""
+            onerror="this.loaderr='y';"></script>
     <script src="{% static 'booking/ws/project5868788/tilda-blocks-page30032947.min.js' %}" charset="utf-8" async=""
             onerror="this.loaderr='y';"></script>
-    <script src="{% static 'booking/js/tilda-lazyload-1.0.min.js' %}" charset="utf-8" async="" onerror="this.loaderr='y';"></script>
-    <script src="{% static 'booking/js/tilda-animation-2.0.min.js' %}" charset="utf-8" async="" onerror="this.loaderr='y';"></script>
-    <script src="{% static 'booking/js/tilda-zero-1.1.min.js' %}" charset="utf-8" async="" onerror="this.loaderr='y';"></script>
-    <script src="{% static 'booking/js/tilda-menu-1.0.min.js' %}" charset="utf-8" async="" onerror="this.loaderr='y';"></script>
-    <script src="{% static 'booking/js/tilda-animation-sbs-1.0.min.js' %}" charset="utf-8" async="" onerror="this.loaderr='y';"></script>
-    <script src="{% static 'booking/js/tilda-zero-scale-1.0.min.js' %}" charset="utf-8" async="" onerror="this.loaderr='y';"></script>
-    <script src="{% static 'booking/js/tilda-skiplink-1.0.min.js' %}" charset="utf-8" async="" onerror="this.loaderr='y';"></script>
-    <script src="{% static 'booking/js/tilda-events-1.0.min.js' %}" charset="utf-8" async="" onerror="this.loaderr='y';"></script>
+    <script src="{% static 'booking/js/tilda-lazyload-1.0.min.js' %}" charset="utf-8" async=""
+            onerror="this.loaderr='y';"></script>
+    <script src="{% static 'booking/js/tilda-animation-2.0.min.js' %}" charset="utf-8" async=""
+            onerror="this.loaderr='y';"></script>
+    <script src="{% static 'booking/js/tilda-zero-1.1.min.js' %}" charset="utf-8" async=""
+            onerror="this.loaderr='y';"></script>
+    <script src="{% static 'booking/js/tilda-menu-1.0.min.js' %}" charset="utf-8" async=""
+            onerror="this.loaderr='y';"></script>
+    <script src="{% static 'booking/js/tilda-animation-sbs-1.0.min.js' %}" charset="utf-8" async=""
+            onerror="this.loaderr='y';"></script>
+    <script src="{% static 'booking/js/tilda-zero-scale-1.0.min.js' %}" charset="utf-8" async=""
+            onerror="this.loaderr='y';"></script>
+    <script src="{% static 'booking/js/tilda-skiplink-1.0.min.js' %}" charset="utf-8" async=""
+            onerror="this.loaderr='y';"></script>
+    <script src="{% static 'booking/js/tilda-events-1.0.min.js' %}" charset="utf-8" async=""
+            onerror="this.loaderr='y';"></script>
     <!-- nominify begin --><!-- start TL head script -->
     <script type="text/javascript">
         (function(w) {
@@ -337,7 +353,8 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();
                          data-field-left-res-480-value="435" data-field-top-res-640-value="31"
                          data-field-left-res-640-value="595" data-field-top-res-960-value="-1004"
                          data-field-left-res-960-value="-274"><a class="tn-atom" href="#menuopen"> <img
-                            class="tn-atom__img t-img" data-original="{% static 'booking/img/tild3833-6131-4261-b331-376136363439/svg.svg' %}"
+                            class="tn-atom__img t-img"
+                            data-original="{% static 'booking/img/tild3833-6131-4261-b331-376136363439/svg.svg' %}"
                             alt="" imgfield="tn_img_1659708848531"> </a></div>
                     <div class="t396__elem tn-elem tn-elem__4725132071666264081057" data-elem-id="1666264081057"
                          data-elem-type="text" data-field-top-value="20" data-field-left-value="370"
@@ -475,7 +492,8 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();
                          data-field-left-res-480-value="435" data-field-top-res-640-value="24"
                          data-field-left-res-640-value="595" data-field-top-res-960-value="24"
                          data-field-left-res-960-value="915"><a class="tn-atom" href="#menuopen"> <img
-                            class="tn-atom__img t-img" data-original="{% static 'booking/img/tild3833-6131-4261-b331-376136363439/svg.svg' %}"
+                            class="tn-atom__img t-img"
+                            data-original="{% static 'booking/img/tild3833-6131-4261-b331-376136363439/svg.svg' %}"
                             alt="" imgfield="tn_img_1659028950724"> </a></div>
                     <div class="t396__elem tn-elem tn-elem__4725275901659028950730" data-elem-id="1659028950730"
                          data-elem-type="button" data-field-top-value="13" data-field-left-value="975"
@@ -658,7 +676,8 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();
                     <div class="t-width t-width_100 "> <!-- nominify begin --> <!--!ANNEXX!-->
                         <!--!ANX804-1 Плавный скролл страницы!-->
                         <!--![{"id":"stop","data":"800"},{"id":"speed","data":"100"}]!-->
-                        <script src="{% static 'booking/ajax/libs/smoothscroll/1.4.10/SmoothScroll.js' %}" type="text/javascript"></script>
+                        <script src="{% static 'booking/ajax/libs/smoothscroll/1.4.10/SmoothScroll.js' %}"
+                                type="text/javascript"></script>
                         <script>
                             SmoothScroll ({ animationTime: /*!stop!*/800/*!/stop!*/, stepSize: /*!speed!*/100/*!/speed!*/, accelerationDelta: 150, accelerationMax: 10, keyboardSupport: true, arrowScroll: 50, pulseAlgorithm: true, pulseScale: 5, pulseNormalize: 1, fixedBackground : true, touchpadSupport: true })
                         </script> <!-- nominify end --> </div>
@@ -696,46 +715,12 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();
         </div>
         <script>t_onReady(function() {t_onFuncLoad('t396_init',function() {t396_init('486020086');});});</script>
         <!-- /T396 --> </div>
-    <div id="rec486007364" class="r t-rec" style=" " data-animationappear="off" data-record-type="131"> <!-- T123 -->
-        <div class="t123">
-            <div class="t-container_100 ">
-                <div class="t-width t-width_100 "> <!-- nominify begin -->
-                    <style>
-                        #tl-booking-form{
-                            width: 100%;
-                            max-width: 1200px;
-                            margin: 0 auto;
-                        }
-                    </style> <!-- start TL Booking form script -->
-                    <div id="tl-booking-form">&nbsp;</div>
-                    <script type="text/javascript">
+    <div class="cust-block-catalog">
+        <div class="cust-block-search" id="tl-search-form">
 
-                        (function(w) {
-                            var q = [
-                                ['setContext', 'TL-INT-safmarlesnaya_2022-08-31', 'ru'],
-                                ['embed', 'booking-form', {
-                                    container: 'tl-booking-form'
-                                }]
-                            ];
-                            var h=["ru-ibe.tlintegration.ru","ibe.tlintegration.ru","ibe.tlintegration.com"];
-                            var t = w.travelline = (w.travelline || {}),
-                                ti = t.integration = (t.integration || {});
-                            ti.__cq = ti.__cq? ti.__cq.concat(q) : q;
-                             if (!ti.__loader) {
-                              ti.__loader = true;
-                              var d=w.document,c=d.getElementsByTagName("head")[0]||d.getElementsByTagName("body")[0];
-                              function e(s,f) {return function() {w.TL||(c.removeChild(s),f())}}
-                              (function l(h) {
-                                  if (0===h.length) return; var s=d.createElement("script");
-                                  s.type="text/javascript";s.async=!0;s.src = "https://" + h[0] + "/integration/loader.js";
-                                  s.onerror=s.onload=e(s,function(){l(h.slice(1,h.length))});c.appendChild(s)
-                              })(h);
-                          }
-                        })(window);
-                    </script> <!-- end TL Booking form script --> <!-- nominify end --> </div>
-            </div>
         </div>
     </div>
+
     <div id="rec486018368" class="r t-rec t-rec_pt_45 t-rec_pb_45" style="padding-top:45px;padding-bottom:45px; "
          data-record-type="113">
         <div style="height:80px;"></div>
