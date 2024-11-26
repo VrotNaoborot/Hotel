@@ -11,20 +11,47 @@
 .cust-catalog-body {
     background-color: rgb(233, 233, 233);
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(2rem, 1fr));
-    grid-gap: 0.15rem;
-    margin-block: 0;
-    margin-inline: 0;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Минимум 300px на карточку */
+    grid-gap: 1rem; /* Пространство между карточками */
+    margin: 0 auto; /* Центровка */
+    width: 100%; /* Растягиваем на всю ширину */
+}
+
+.cust-catalog-body {
+    background-color: rgb(233, 233, 233);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Минимум 300px, максимум равномерное распределение */
+    grid-gap: 1rem; /* Расстояние между карточками */
+    margin: 0 auto; /* Центровка содержимого */
+    width: 100%; /* Используем всю ширину родительского контейнера */
+}
+
+
+.cust-catalog-body {
+    background-color: rgb(233, 233, 233);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Минимум 300px для каждой карточки */
+    grid-gap: 1rem; /* Отступы между карточками */
+    margin: 0; /* Убираем внешние отступы */
+    padding: 20px;; /* Добавляем отступы по краям контейнера */
+    box-sizing: border-box; /* Учитываем отступы в ширине и высоте */
 }
 
 .cust-card {
+    background-color: white;
     box-sizing: border-box;
-    inline-size: 100%;
-    padding-block: 0;
-    padding-inline: 0;
-    width: 100px;
-    height: 100px;
+    width: 100%; /* Карточка занимает 100% доступной ширины */
+    height: 200px; /* Высота карточки */
+    border: 1px solid rgb(102, 102, 102);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    height: 459px;
+    flex-direction: column;
 }
+
+
 
 .cust-f {
    background-color: rgb(255, 255, 255);
