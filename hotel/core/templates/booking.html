@@ -62,6 +62,8 @@ function t_onFuncLoad(funcName,okFunc,time) {if(typeof window[funcName]==='funct
             onerror="this.loaderr='y';"></script>
     <script src="{% static 'booking/js/tilda-events-1.0.min.js' %}" charset="utf-8" async=""
             onerror="this.loaderr='y';"></script>
+    <script src="{% static 'booking/js/card.js' %}" charset="utf-8" async=""
+            onerror="this.loaderr='y';"></script>
     <!-- nominify begin --><!-- start TL head script -->
     <script type="text/javascript">
         (function(w) {
@@ -724,24 +726,64 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();
             <div class="cust-card">
                 <div class="cust-card-top">
                     <div class="cust-card-i">
-                        <div class="cust-card-first">
-                            <div class="cust-card-img-container" role="img" style="background-image: url(&quot;https://secure.travelline.ru/resource/thumb/1000x700/rt/140668/637804531904697913-0a8b59be-d412-4bc2-a6de-311c24235a3b&quot;);"></div>
-                        </div>
-                        <div class="cust-card-first">
-                            <div class="cust-card-img-container" role="img" style="background-image: url(&quot;https://secure.travelline.ru/resource/thumb/1000x700/rt/140668/637602292179914433-6b6589cc-4164-46f0-896a-22d03337ae14&quot;);"></div>
-                        </div>
-                        <div class="cust-card-first">
-                            <div class="cust-card-img-container" role="img" style="background-image: url(&quot;https://secure.travelline.ru/resource/thumb/1000x700/rt/140668/637804519263991110-27ac561a-ad73-4772-a922-6dc604eb83c7&quot;);"></div>
-                        </div>
-                        <div class="cust-card-first">
-                            <div class="cust-card-img-container" role="img" style="background-image: url(&quot;https://secure.travelline.ru/resource/thumb/1000x700/rt/140668/637602292181308622-daeec7b9-5989-4b0c-9aef-81a336231416&quot;);"></div>
-                        </div>
+                        <div class="cust-card-first active image image-1" style="background-image: url('https://secure.travelline.ru/resource/thumb/1000x700/rt/140668/637804531904697913-0a8b59be-d412-4bc2-a6de-311c24235a3b');"></div>
+                        <div class="cust-card-first image image-2" style="background-image: url('https://secure.travelline.ru/resource/thumb/1000x700/rt/140668/637602292179914433-6b6589cc-4164-46f0-896a-22d03337ae14');"></div>
+                        <div class="cust-card-first image image-3" style="background-image: url('https://secure.travelline.ru/resource/thumb/1000x700/rt/140668/637804519263991110-27ac561a-ad73-4772-a922-6dc604eb83c7');"></div>
+                        <div class="cust-card-first image image-4" style="background-image: url('https://secure.travelline.ru/resource/thumb/1000x700/rt/140668/637602292181308622-daeec7b9-5989-4b0c-9aef-81a336231416');"></div>
                     </div>
                     <div class="blocks">
-                        <div class="block current-block"></div>
-                        <div class="block"></div>
-                        <div class="block"></div>
-                        <div class="block"></div>
+                        <div class="block active" data-target="1"></div>
+                        <div class="block" data-target="2"></div>
+                        <div class="block" data-target="3"></div>
+                        <div class="block" data-target="4"></div>
+                    </div>
+                </div>
+                <div class="cust-card-bottom">
+                    <div class="cust-card-name">
+                        Стандартный номер с большой двухспальной кроватью
+                    </div>
+                    <div class="cust-card-info">
+                        <div class="property">
+                            <svg class="property__icon" viewBox="0 0 20 20">
+                                <path fill="currentColor" d="M9 0c1.095 0 2.205 1.08 2.205 3.15a4.837 4.837 0 01-1.11 3v.817c.053.233.473.87 1.612 1.336 1.14.464 1.328.75 1.598 1.462.127.464.193.944.195 1.425 0 0-.307.81-3.795.81h-1.41c-3.502 0-3.795-.81-3.795-.81 0-.486.066-.97.195-1.44.27-.682.443-.998 1.598-1.463 1.155-.465 1.56-1.102 1.612-1.335v-.824a4.838 4.838 0 01-1.11-3C6.795 1.064 7.875 0 9 0zM3.75 11.182a5.655 5.655 0 01.248-1.717A2.865 2.865 0 016 7.582l.143-.082a1.02 1.02 0 01-.263-.375v-.668c.296-.31.535-.67.705-1.064a5.573 5.573 0 01-.54-2.25c0-.368.039-.735.113-1.095-.342-.341-.801-.537-1.283-.548-1.02 0-2.017.855-2.017 2.558A3.675 3.675 0 003.87 6.48v.667c-.045.18-.427.705-1.5 1.08-1.072.375-1.215.638-1.462 1.193-.112.38-.165.774-.158 1.17 0 0 .248.592 3 .652v-.06zM17.07 9.42c-.247-.555-.405-.818-1.5-1.193-1.095-.375-1.425-.9-1.5-1.08V6.48a3.675 3.675 0001.012-2.423c.06-1.68-.952-2.557-1.957-2.557a1.8 1.8 0 00-1.29.54c.076.365.117.737.12 1.11a5.572 5.572 0 01-.54 2.25c.17.394.409.755.705 1.065v.668a1.02 1.02 0 01-.262.375l.127.06a2.865 2.865 0 012.018 1.882c.171.561.255 1.146.247 1.732v.068c2.745-.06 3-.652 3-.652 0-.4-.06-.797-.18-1.178z"></path>
+                            </svg>
+                            <div class="property__label">
+                                до <value>2</value> мест
+                            </div>
+                        </div>
+                        <div class="property">
+                            <svg class="property__icon" viewBox="0 0 20 20">
+                                <path fill="currentColor" d="M12.396 4.5H9V3h6v6h-1.5V5.517l-7.953 8.037H9v1.5H3V9h1.5v3.48l7.896-7.98z"></path>
+                            </svg>
+                            <div class="property__label">
+                                25 м²
+                            </div>
+                        </div>
+                        <div class="property">
+                            <svg class="property__icon" viewBox="0 0 30 30">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2v5H2v15h15v-9h5V2H11zm9 9V4h-7v5H4v11h11v-9h5z" fill="currentColor"></path>
+                            </svg>
+                            <div class="property__label">
+                                1 комн.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cust-card-price-margin">
+                        <div class="cust-card-cont">
+                            <div class="cust-card-price">
+                                <div class="cust-card-price-i">
+                                    <span class="lower-word">от </span>
+                                    <span class="price-value">12 000</span>
+                                    <span class="value-price">₽</span>
+                                </div>
+                                <div class="cust-card-room-info">
+                                    <div class="number-night">1 ночь</div>
+                                    <div class="slash"> / </div>
+                                    <div class="number-guests">2 гостя</div>
+                                </div>
+                            </div>
+                            <div class="btn-choose">Выбрать</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -751,6 +793,7 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();
             <div class="cust-card">Карточка 3</div>
             <div class="cust-card">Карточка 4</div>
         </div>
+
     </div>
 
     <div id="rec486018368" class="r t-rec t-rec_pt_45 t-rec_pb_45" style="padding-top:45px;padding-bottom:45px; "

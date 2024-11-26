@@ -37,21 +37,6 @@
     box-sizing: border-box; /* Учитываем отступы в ширине и высоте */
 }
 
-.cust-card {
-    background-color: white;
-    box-sizing: border-box;
-    width: 100%; /* Карточка занимает 100% доступной ширины */
-    height: 200px; /* Высота карточки */
-    border: 1px solid rgb(102, 102, 102);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    height: 459px;
-    flex-direction: column;
-}
-
-
 
 .cust-f {
    background-color: rgb(255, 255, 255);
@@ -65,49 +50,97 @@
    cursor: pointer;
 }
 
-.cust-card-main {
-    display: flex;
-    flex-direction: column;
-    block-size: 100%;
+
+.cust-card {
+    background-color: white;
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    width: 100%; /* Карточка занимает 100% доступной ширины */
+    border: 1px solid rgb(102, 102, 102);
+    display: flex;
+    border-radius: 10px;
+    min-height: 400px;
+    flex-direction: column;
+    overflow: hidden; /* Скрыть содержимое за границами */
+    transition: box-shadow ease .3s;
+
 }
 
 .cust-card-top {
-    inline-size: 100%;
-    block-size: 100%;
+    flex: 0 0 45%; /* Верхняя часть занимает 45% от высоты родителя */
+    background-color: #e3e3e3; /* Для тестирования */
     position: relative;
-    padding-block-end: 60%;
-    cursor: pointer;
+    width: 100%;
+    height: 100%; /* Убедитесь, что дочерний элемент растягивается по высоте */
+}
+
+.cust-card-bottom {
+    box-sizing: border-box;
+    flex: 0 0 55%; /* Нижняя часть занимает 60% */
+    background-color: #fff; /* Белый фон */
+    display: flex;
+    justify-content: center; /* Центрирование текста по горизонтали */
+    align-items: center; /* Центрирование текста по вертикали */
+    font-size: 1rem; /* Размер текста */
+    padding: 20px;
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+.cust-card-name {
+    width: 100%;
+    font-size: 20px;
+    flex: 1 1 auto;
+}
+
+.cust-card-info {
+    width: 100%;
+    align-items: self-start;
+    flex: 1 1 auto;
+}
+
+.property {
+    display: inline-flex;
+    max-width: 100%;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.property__icon {
+    width: 20px;    /* Фиксированная ширина */
+    height: 20px;   /* Фиксированная высота */
+    align-self: center; /* Вертикальное выравнивание */
+}
+
+.property__label {
+    white-space: nowrap; /* Запрещает перенос текста на новую строку */
 }
 
 .cust-card-first {
     inline-size: 100%;
     block-size: 100%;
     position: absolute;
-    inset-block-start: 0;
-    inset-inline-start: 0;
+    inset: 0;
     z-index: 1;
-    overflow: hidden;
+    opacity: 0; /* По умолчанию изображения невидимы */
+    transition: opacity 0.3s ease; /* Плавный переход */
+    pointer-events: none; /* Скрываем их от кликов */
+    background-size: cover; /* Масштабирование для заполнения без искажений */
+    background-position: center; /* Центрируем изображение */
+    background-repeat: no-repeat; /* Отключаем повторение */
+}
+
+.cust-card-first.active {
+    opacity: 1; /* Делает изображение видимым */
+    pointer-events: auto; /* Активация событий */
+    width: 100%
 }
 
 .cust-card-i {
     inline-size: 100%;
     block-size: 100%;
-    position: absolute;
-    inset-inline-start: 0;
+    position: relative;
 }
 
-.cust-card-img-container {
-    background-position: 50%;
-    background-size: cover;
-    height: 100%;
-    position: relative;
-    -webkit-transition: opacity .3s;
-    transition: opacity .3s;
-    width: 100%;
-}
 
 .blocks {
     inline-size: 100%;
@@ -126,7 +159,24 @@
     flex-direction: column-reverse;
     block-size: 100%;
     padding-block: 0 0.05rem;
-    padding-inline: 0.025rem;
+    padding-inline: 0.095rem;
+    cursor: pointer;
+}
+
+.block::after {
+    content: "";
+    display: block;
+    inline-size: 100%;
+    block-size: 4px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: .3s background-color;
+    margin-block-end: 4px; /* Поднимает элемент выше */
+
+}
+
+.block.active::after {
+    background-color: rgb(67, 67, 67);
 }
 
 .block:first-child {
@@ -135,4 +185,68 @@
 
 .block-current {
     padding-inline-start: 0.075rem;
+}
+
+.cust-card-price-margin {
+    margin-block-start: 20px;
+    width: 100%;
+}
+
+.cust-card-cont {
+    display: flex; /* Оставляем только flex */
+    align-items: flex-end;
+    line-height: 1;
+    vertical-align: top;
+    position: relative;
+    justify-content: space-between; /* Распределение элементов по бокам */
+}
+
+
+.cust-card-price {
+    flex: 0 1 auto;
+    margin-block-start: 5px;
+    margin-inline-end: 5px;
+}
+
+.cust-card-price-i {
+    position: relative;
+}
+
+.lower-word {
+    font-size: 14px;
+}
+
+.price-value {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.value-price {
+    color: #999;
+    font-size: 24px;
+}
+
+.cust-card-room-info {
+    display: flex;
+    color: #999;
+}
+
+.slash {
+    font-size: 20px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.btn-choose {
+    display: flex;
+    background-color: rgb(103, 190, 67);
+    padding: 10px;
+    color: white;
+    height: auto;
+    align-items: center;
+}
+
+.cust-card:hover {
+    box-shadow: 0 20px 31px rgba(0,0,0,.16),0 0 20px rgba(0,0,0,.037),0 0 0 1px rgba(61,61,61,.09);
+    cursor: pointer;
 }
