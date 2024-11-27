@@ -4,7 +4,6 @@
 
 .bg-white {
     display: inline-block;
-    background-color: white;
     width: 70px !important;
 }
 
@@ -22,6 +21,9 @@
 }
 
 .white-logo {
-    width: 30px;
     filter: invert(1);
+}
+
+.logo-margin {
+    top: 10px !important;
 }
