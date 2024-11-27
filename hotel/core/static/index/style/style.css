@@ -21,3 +21,7 @@
     background-image: url('/static/index/img/main1.jpeg') !important;
 }
 
+.white-logo {
+    width: 30px;
+    filter: invert(1);
+}
