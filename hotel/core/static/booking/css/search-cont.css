@@ -109,10 +109,12 @@
     width: 20px;    /* Фиксированная ширина */
     height: 20px;   /* Фиксированная высота */
     align-self: center; /* Вертикальное выравнивание */
+    color: #999;
 }
 
 .property__label {
     white-space: nowrap; /* Запрещает перенос текста на новую строку */
+    color: #999;
 }
 
 .cust-card-first {

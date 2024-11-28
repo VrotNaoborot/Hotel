@@ -22,4 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', main),
     path('booking', booking),
+    path('card_detail', card_detail),
+    path('order', order)
 ]

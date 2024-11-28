@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Стандартный номер</title>
+    <link rel="stylesheet" href="{% static 'card_detail/css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="title">Стандартный номер с большой двуспальной кроватью</div>
+        <div class="photo-container">
+            <div class="photo-large">
+                <div class="availability">Осталось 3 номера</div>
+                <img src="{% static 'card_detail/img/info1.jpg' %}" alt="Большая фотография">
+            </div>
+            <div class="photo-grid">
+                <img src="{% static 'card_detail/img/info2.jpeg' %}" alt="Фото 1">
+                <img src="{% static 'card_detail/img/info3.jpg' %}" alt="Фото 2">
+                <img src="{% static 'card_detail/img/info1.jpg' %}" alt="Фото 3">
+                <img src="{% static 'card_detail/img/info1.jpg' %}" alt="Фото 4">
+            </div>
+        </div>
+        <div class="case-info">
+            <div class="case-info-left">
+                <div class="properties">
+                    <div class="property-first-row">
+                        <div class="property">
+                            <svg class="property__icon" viewBox="0 0 20 20">
+                                <path fill="currentColor"
+                                      d="M9 0c1.095 0 2.205 1.08 2.205 3.15a4.837 4.837 0 01-1.11 3v.817c.053.233.473.87 1.612 1.336 1.14.464 1.328.75 1.598 1.462.127.464.193.944.195 1.425 0 0-.307.81-3.795.81h-1.41c-3.502 0-3.795-.81-3.795-.81 0-.486.066-.97.195-1.44.27-.682.443-.998 1.598-1.463 1.155-.465 1.56-1.102 1.612-1.335v-.824a4.838 4.838 0 01-1.11-3C6.795 1.064 7.875 0 9 0zM3.75 11.182a5.655 5.655 0 01.248-1.717A2.865 2.865 0 016 7.582l.143-.082a1.02 1.02 0 01-.263-.375v-.668c.296-.31.535-.67.705-1.064a5.573 5.573 0 01-.54-2.25c0-.368.039-.735.113-1.095-.342-.341-.801-.537-1.283-.548-1.02 0-2.017.855-2.017 2.558A3.675 3.675 0 003.87 6.48v.667c-.045.18-.427.705-1.5 1.08-1.072.375-1.215.638-1.462 1.193-.112.38-.165.774-.158 1.17 0 0 .248.592 3 .652v-.06zM17.07 9.42c-.247-.555-.405-.818-1.5-1.193-1.095-.375-1.425-.9-1.5-1.08V6.48a3.675 3.675 0001.012-2.423c.06-1.68-.952-2.557-1.957-2.557a1.8 1.8 0 00-1.29.54c.076.365.117.737.12 1.11a5.572 5.572 0 01-.54 2.25c.17.394.409.755.705 1.065v.668a1.02 1.02 0 01-.262.375l.127.06a2.865 2.865 0 012.018 1.882c.171.561.255 1.146.247 1.732v.068c2.745-.06 3-.652 3-.652 0-.4-.06-.797-.18-1.178z"></path>
+                            </svg>
+                            <div class="property__label">
+                                Вместимость до
+                                <value>2</value>
+                                мест
+                            </div>
+                        </div>
+                    </div>
+                    <div class="property-second-row">
+                        <div class="property">
+                            <svg class="property__icon" viewBox="0 0 20 20">
+                                <path fill="currentColor"
+                                      d="M12.396 4.5H9V3h6v6h-1.5V5.517l-7.953 8.037H9v1.5H3V9h1.5v3.48l7.896-7.98z"></path>
+                            </svg>
+                            <div class="property__label">
+                                25 м²
+                            </div>
+                        </div>
+                        <div class="property">
+                            <svg class="property__icon" viewBox="0 0 30 30">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M11 2v5H2v15h15v-9h5V2H11zm9 9V4h-7v5H4v11h11v-9h5z"
+                                      fill="currentColor"></path>
+                            </svg>
+                            <div class="property__label">
+                                1 комн.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="features">
+                    <div class="feature-block">
+                        <svg class="feature-img">
+                            <path d="M19.302 10.812c.205.181.517.18.71-.013l1.463-1.463a.484.484 0 00-.003-.696C19.092 6.405 15.645 5 11.81 5 7.976 5 4.53 6.405 2.15 8.64a.484.484 0 00-.004.696l1.463 1.463a.518.518 0 00.71.013C6.283 9.067 8.916 8 11.81 8c2.895 0 5.528 1.067 7.492 2.812z" fill="currentColor"></path><path d="M17.87 12.94c.2-.2.195-.529-.023-.71-1.678-1.4-3.769-2.23-6.037-2.23-2.267 0-4.359.83-6.036 2.23a.481.481 0 00-.023.71l1.365 1.366c.182.182.47.195.678.044C8.974 13.49 10.347 13 11.81 13c1.464 0 2.836.492 4.017 1.35a.524.524 0 00.678-.044l1.365-1.365zM14.224 15.842c.232.17.24.505.037.708l-2.097 2.097a.5.5 0 01-.707 0L9.36 16.55c-.203-.203-.195-.538.037-.708.739-.542 1.555-.842 2.413-.842.859 0 1.675.3 2.414.842z" fill="currentColor"></path>
+                        </svg>
+                        <div class="feature-label">
+                            Wi-Fi
+                        </div>
+                    </div>
+
+                    <div class="feature-block">
+                        <svg class="feature-img">
+                            <path d="M17.5 8a.5.5 0 000-1h-2a.5.5 0 000 1h2z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M17.983 13H20.8a.2.2 0 00.2-.2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6.8c0 .11.09.2.2.2h2.817A1.2 1.2 0 007.2 14h9.6a1.2 1.2 0 001.183-1zM19 11V6H5v5h1v-.8A1.2 1.2 0 017.2 9h9.6a1.2 1.2 0 011.2 1.2v.8h1zM8 12v-1h8v1H8z" fill="currentColor"></path><path d="M12 15a1 1 0 011 1v4a1 1 0 11-2 0v-4a1 1 0 011-1zM8 15a1 1 0 011 1v2a3 3 0 01-3 3H5a1 1 0 110-2h1a1 1 0 001-1v-2a1 1 0 011-1zM16 15a1 1 0 011 1v2a1 1 0 001 1h1a1 1 0 110 2h-1a3 3 0 01-3-3v-2a1 1 0 011-1z" fill="currentColor"></path>
+                        </svg>
+                        <div class="feature-label">
+                            Кондиционер
+                        </div>
+                    </div>
+
+                    <div class="feature-block">
+                        <svg class="feature-img">
+                            <path d="M6.02 11a1 1 0 011-1h3a1 1 0 011 1v2h-5v-2zM13.02 11a1 1 0 011-1h3a1 1 0 011 1v2h-5v-2z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M10.438 2.851a2 2 0 013.124 0L16.48 6.5H19a2 2 0 012 2V14a1 1 0 011 1v6a1 1 0 11-2 0v-1H4v1a1 1 0 11-2 0v-6a1 1 0 011-1V8.5a2 2 0 012-2h2.52l2.918-3.649zM5 14h14V8.5h-2.52a2 2 0 01-1.561-.75L12 4.1 9.081 7.75a2 2 0 01-1.562.75H5V14zm15 4v-1H4v1h16z" fill="currentColor"></path>
+                        </svg>
+                        <div class="feature-label">
+                            Большая кровать
+                        </div>
+                    </div>
+
+                    <div class="feature-block">
+                        <svg class="feature-img">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M16 11a2 2 0 11-4 0 2 2 0 014 0zm-1 0a1 1 0 11-2 0 1 1 0 012 0z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M7 6h11v10H7v-1h.5a.5.5 0 000-1H7V8h.5a.5.5 0 000-1H7V6zm10 5a3 3 0 11-6 0 3 3 0 016 0z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v15a1 1 0 01-1 1h-1a1 1 0 11-2 0H7a1 1 0 11-2 0H4a1 1 0 01-1-1V4zm3 11v1a1 1 0 001 1h11a1 1 0 001-1V6a1 1 0 00-1-1H7a1 1 0 00-1 1v1h-.5a.5.5 0 000 1H6v6h-.5a.5.5 0 000 1H6z" fill="currentColor"></path>
+                        </svg>
+                        <div class="feature-label">
+                            Сейф
+                        </div>
+                    </div>
+
+                    <div class="feature-block">
+                        <svg class="feature-img">
+                            <path d="M4 5a1 1 0 00-1 1v12a1 1 0 001 1h2a1 1 0 001-1V6a1 1 0 00-1-1H4z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M9 6a1 1 0 00-1 1v11a1 1 0 001 1h11a1 1 0 001-1V7a1 1 0 00-1-1H9zm1.2 5a.2.2 0 00-.2.2v4.6c0 .11.09.2.2.2h2.6a.2.2 0 00.2-.2v-4.6a.2.2 0 00-.2-.2h-2.6zm3.8.5a.5.5 0 01.5-.5h1a.5.5 0 010 1h-1a.5.5 0 01-.5-.5zm.5 1.5a.5.5 0 000 1h1a.5.5 0 000-1h-1zm-.5 2.5a.5.5 0 01.5-.5h1a.5.5 0 010 1h-1a.5.5 0 01-.5-.5zm3.5-4.5a.5.5 0 000 1h1a.5.5 0 000-1h-1zm-.5 2.5a.5.5 0 01.5-.5h1a.5.5 0 010 1h-1a.5.5 0 01-.5-.5zm.5 1.5a.5.5 0 000 1h1a.5.5 0 000-1h-1zM10 8.2c0-.11.09-.2.2-.2h8.6c.11 0 .2.09.2.2v1.6a.2.2 0 01-.2.2h-8.6a.2.2 0 01-.2-.2V8.2z" fill="currentColor"></path>
+                        </svg>
+                        <div class="feature-label">
+                            Телефон
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="case-info-right">
+                Почувствуйте себя как дома в вашем просторном номере, оборудованным всем необходимым для комфортного отдыха. К вашим услугам набор для приготовления чая и кофе, гладильная доска и утюг, сейф, подходящий для размещения лэптопа, мини-бар и ванная комната с косметическим зеркалом, просторной ванной и необходимыми косметическими принадлежностями. В номере есть доступ к высокоскоростному Wi – Fi.
+            </div>
+        </div>
+        <div class="accommodations">
+            <div class="acc-column">
+                <div class="acc-name-cat">Видео/аудио</div>
+                <div class="acc-content">
+                    <div class="acc-block">
+                        <svg class="acc-img">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2 6a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2h-.586l2 2h-2.828l-2-2H7.414l-2 2H2.586l2-2H4a2 2 0 01-2-2V6zm18 0H4v8h16V6z" fill="currentColor"></path>
+                        </svg>
+                        <div class="acc-name">
+                            Телевизор с плоским экраном
+                        </div>
+                    </div>
+                    <div class="acc-block">
+                        <svg class="acc-img">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2 6a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2h-.586l2 2h-2.828l-2-2H7.414l-2 2H2.586l2-2H4a2 2 0 01-2-2V6zm18 0H4v8h16V6z" fill="currentColor"></path>
+                        </svg>
+                        <div class="acc-name">
+                            Интерактивное телевидение
+                        </div>
+                    </div>
+                    <div class="acc-block">
+                        <svg class="acc-img">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2 6a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2h-.586l2 2h-2.828l-2-2H7.414l-2 2H2.586l2-2H4a2 2 0 01-2-2V6zm18 0H4v8h16V6z" fill="currentColor"></path>
+                        </svg>
+                        <div class="acc-name">
+                            Кабельное телевидение
+                        </div>
+                    </div>
+                    <div class="acc-block">
+                        <svg class="acc-img">
+                            <path d="M13.104 8.234a.3.3 0 01.3.3v.03a.3.3 0 01-.3.3h-.366v.57h.24a.303.303 0 010 .606h-.029c.087.088.18.19.26.288.11.132.064.322-.085.407l-.035.019h.123a.294.294 0 110 .588h-1.696a.294.294 0 010-.588h.556v-.714h-.328a.303.303 0 010-.606h.328v-.57h-.484a.3.3 0 01-.3-.3v-.03a.3.3 0 01.3-.3h1.516z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M14.972 7.45a.5.5 0 00-.5-.5h-4.016a.5.5 0 00-.5.5v5.084a.5.5 0 00.5.5h.532a.3.3 0 00.3-.3h2.31a.3.3 0 00.3.3h.574a.5.5 0 00.5-.5V7.45zm-1.074.46v3.864h-2.91V7.91h2.91z" fill="currentColor"></path><path d="M18.024 7.044a.3.3 0 01.3.316c-.005.076-.008.166-.012.27v.001c-.01.217-.02.487-.042.788-.005 1.031.176 2.496 1.4 3.333a.297.297 0 01.056.443c-.183.207-.369.412-.554.617l-.001.001a.3.3 0 01-.394.045 3.631 3.631 0 01-1.21-1.466c-.293.58-.711 1.103-1.313 1.445a.319.319 0 01-.365-.03 8.19 8.19 0 01-.607-.59.307.307 0 01.084-.485c.795-.398 1.19-1.101 1.383-1.875.195-.78.175-1.595.16-2.17V7.68c-.004-.123-.007-.238-.007-.336a.3.3 0 01.3-.3h.822z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M4.927 7.945a.5.5 0 00-.5.5v2.776a.5.5 0 00.5.5h.326a.5.5 0 00.5-.5v-.171h.277v1.384a.5.5 0 00.5.5h.362a.5.5 0 00.5-.5V11.05h.278v.14a.5.5 0 00.5.5h.356a.5.5 0 00.5-.5V8.446a.5.5 0 00-.5-.5H7.392v-.48a.5.5 0 00-.5-.5H6.53a.5.5 0 00-.5.5v.48H4.927zM6.03 9.742h-.277v-.489h.277v.489zm1.362-.489h.278v.489h-.278v-.489z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M4 4a2 2 0 00-2 2v10a2 2 0 002 2h.586l-2 2h2.828l2-2h9.172l2 2h2.828l-2-2H20a2 2 0 002-2V6a2 2 0 00-2-2H4zm0 2h16v8H4V6z" fill="currentColor"></path>
+                        </svg>
+                        <div class="acc-name">
+                            Английский канал
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="acc-column">
+                <div class="acc-name-cat">Ванная комната</div>
+                <div class="acc-content">
+                    <div class="acc-block">
+                        <svg class="acc-img">
+                            <path d="M17 2a2 2 0 00-2 2v1h-1a1 1 0 100 2h4a1 1 0 100-2h-1V4h3v6H3a1 1 0 100 2h18a1 1 0 001-1V4a2 2 0 00-2-2h-3zM3 13h18v3a3 3 0 01-2.498 2.958 1 1 0 01-1.709.75L16.086 19H7.914l-.707.707a1 1 0 01-1.709-.749A3 3 0 013 16v-3z" fill="currentColor"></path>
+                        </svg>
+                        <div class="acc-name">
+                            Ванна
+                        </div>
+                    </div>
+                    <div class="acc-block">
+                        <svg class="acc-img">
+                            <path d="M13 5.5a.5.5 0 011 0V6a1 1 0 102 0v-.5a2.5 2.5 0 00-5 0V10H6V9h.5a.5.5 0 000-1h-2a.5.5 0 000 1H5v1H3a1 1 0 100 2h18a1 1 0 100-2h-2V9h.5a.5.5 0 000-1h-2a.5.5 0 000 1h.5v1h-5V5.5zM21 13H3a5 5 0 005 5h8a5 5 0 005-5zM10 19h4v1a1 1 0 01-1 1h-2a1 1 0 01-1-1v-1z" fill="currentColor"></path>
+                        </svg>
+                        <div class="acc-name">
+                            Раковина
+                        </div>
+                    </div>
+                    <div class="acc-block">
+                        <svg class="acc-img">
+                            <path d="M5 3a1 1 0 00-1 1v16a1 1 0 001 1h6.613a1 1 0 00.948-1.316L12 18h2a6 6 0 006-6H9V4a1 1 0 00-1-1H5z" fill="currentColor"></path><path d="M12 9a2 2 0 00-2 2h10a2 2 0 00-2-2h-6z" fill="currentColor"></path>
+                        </svg>
+                        <div class="acc-name">
+                            Унитаз
+                        </div>
+                    </div>
+                    <div class="acc-block">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="20" height="20" class="acc-img">
+                            <rect x="8" y="10" width="48" height="10" rx="2" ry="2" fill="#c4c4c4" />
+                            <rect x="8" y="24" width="48" height="10" rx="2" ry="2" fill="#c4c4c4" />
+                            <rect x="8" y="38" width="48" height="10" rx="2" ry="2" fill="#c4c4c4" />
+                            <line x1="8" y1="52" x2="56" y2="52" stroke="#c4c4c4" stroke-width="4" stroke-linecap="round" />
+                        </svg>
+                        <div class="acc-name">
+                            Банные полотенца
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="acc-column">
+                <div class="acc-name-cat">Мебель</div>
+                <div class="acc-content">
+                    <div class="acc-block">
+                        <svg class="acc-img">
+                            <path d="M4.486 13.997L3.178 6.151a1 1 0 111.973-.329L6.347 13H10a1 1 0 110 2H8v1.717l1.829 1.097a.5.5 0 11-.515.858L8 17.883v.617a.5.5 0 01-1 0v-.617l-1.314.789a.5.5 0 01-.514-.858L7 16.717V15H5.67a1.2 1.2 0 01-1.184-1.003zM15.938 5.248A.2.2 0 0015.744 5h-4.588a.2.2 0 00-.194.151l-.674 2.697a.2.2 0 01-.194.152H9.2a.2.2 0 00-.2.2v.6c0 .11.09.2.2.2h5.644a.2.2 0 00.194-.152l.9-3.6z" fill="currentColor"></path><path d="M7.056 10a.2.2 0 00-.198.233l.267 1.6a.2.2 0 00.197.167H13v6.8c0 .11.09.2.2.2h1.6a.2.2 0 00.2-.2V12h4.8a.2.2 0 00.2-.2v-1.6a.2.2 0 00-.2-.2H7.056z" fill="currentColor"></path>
+                        </svg>
+                        <div class="acc-name">
+                            Рабочий стол
+                        </div>
+                    </div>
+                    <div class="acc-block">
+                        <svg class="acc-img">
+                            <path d="M14 6.014l-3.985 3.462v-.999L12.867 6h1.117l.016.014zM10 13v-.997l3.983-3.46v.997L10 13z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2a6 6 0 00-6 6v4a1 1 0 00-1 1v8a1 1 0 102 0h10a1 1 0 102 0v-8a1 1 0 00-1-1V8a6 6 0 00-6-6zm4 10V8a4 4 0 00-8 0v4a4 4 0 008 0zm1 7v-3.682A5.994 5.994 0 0112 18a5.994 5.994 0 01-5-2.682V19h10z" fill="currentColor"></path>
+                        </svg>
+                        <div class="acc-name">
+                            Зеркало
+                        </div>
+                    </div>
+                    <div class="acc-block">
+                        <svg class="acc-img">
+                            <path d="M5 8v4h1a2 2 0 012 2h8a2 2 0 012-2h1V8a2 2 0 00-2-2H7a2 2 0 00-2 2z" fill="currentColor"></path><path d="M20 13a1 1 0 011 1v5a1 1 0 01-1 1h-2v1a1 1 0 11-2 0v-1H8v1a1 1 0 11-2 0v-1H4a1 1 0 01-1-1v-5a1 1 0 011-1h2a1 1 0 011 1v1h10v-1a1 1 0 011-1h2z" fill="currentColor"></path>
+                        </svg>
+                        <div class="acc-name">
+                            Кресло
+                        </div>
+                    </div>
+                    <div class="acc-block">
+                        <svg class="acc-img">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 3a1 1 0 011-1h16a1 1 0 011 1v18a1 1 0 11-2 0H5a1 1 0 11-2 0V3zm9 1a.5.5 0 01.5.5v14a.5.5 0 01-1 0v-14A.5.5 0 0112 4zm-2.5 7a.5.5 0 00-.5.5v1a.5.5 0 001 0v-1a.5.5 0 00-.5-.5zm4.5.5a.5.5 0 011 0v1a.5.5 0 01-1 0v-1z" fill="currentColor"></path>
+                        </svg>
+                        <div class="acc-name">
+                            Шкаф для одежды
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

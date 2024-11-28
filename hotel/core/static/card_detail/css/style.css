@@ -1,0 +1,202 @@
+body {
+    font-family: Rubik-Regular, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+.container {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .photo-container {
+        flex-direction: column;
+    }
+
+    .photo-large {
+        width: 100%;
+    }
+
+    .case-info {
+        flex-direction: column;
+    }
+
+    .case-info-left {
+        width: 100% !important;
+    }
+
+    .case-info-right {
+        width: 100% !important;
+        margin-top: 15px;
+        text-align: justify;
+    }
+
+    .properties {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) { /* Для небольших телефонов */
+    .container {
+        max-width: 100%; /* Контейнер занимает всю ширину экрана */
+        padding: 0 10px; /* Добавляем небольшой внутренний отступ */
+    }
+}
+
+.title {
+    font-size: 30px;
+    padding: 15px;
+    padding-left: 20px;
+}
+.availability {
+    position: absolute; /* Абсолютное позиционирование относительно родителя */
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    font-size: 18px;
+    z-index: 10; /* Гарантируем, что элемент будет поверх изображения */
+}
+
+.photo-container {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  gap: 5px;
+}
+
+.photo-large {
+    position: relative; /* Устанавливаем относительное позиционирование для родителя */
+    flex: 1;
+}
+
+.photo-large img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+  flex: 1;
+}
+
+.photo-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/****************************************************/
+
+.case-info {
+    display: flex;
+    padding: 20px;
+}
+
+.case-info-left {
+    width: 50%;
+    padding-right: 20px;
+}
+
+.case-info-right {
+    width: 50%;
+    font-size: 16px;
+}
+
+.property {
+    display: inline-flex;
+    max-width: 100%;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.property__icon {
+    width: 20px;    /* Фиксированная ширина */
+    height: 20px;   /* Фиксированная высота */
+    align-self: center; /* Вертикальное выравнивание */
+    color: #999;
+}
+
+.property__label {
+    color: #999;
+    font-size: 16px;
+}
+
+.features {
+    margin-top: 10px;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку */
+
+}
+
+.feature-block {
+    display: flex;
+    background-color: rgba(61, 61, 61, 0.09);
+    padding: 8px 14px;
+}
+
+.feature-img {
+    margin-right: 4px;
+    width: 25px;
+    height: 20px;
+    color: #999;
+}
+
+.feature-label {
+    color: rgba(24, 37, 43, 0.7)
+}
+
+/**********************************************/
+
+.accommodations {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+    background-color: rgba(61, 61, 61, 0.09);
+}
+
+@media (max-width: 768px) { /* Для устройств с шириной экрана 768px и меньше */
+    .accommodations {
+        grid-template-columns: 1fr; /* Один столбец */
+        padding: 15px; /* Уменьшаем отступы, если нужно */
+        gap: 20px;
+    }
+}
+
+.acc-name-cat {
+    font-weight: bold;
+    color: rgba(24, 37, 43, 0.7);
+}
+
+.acc-content {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.acc-block {
+    display: flex;
+}
+
+.acc-img {
+    width: 25px;
+    height: 20px;
+    margin-right: 3px;
+    color: #999;
+}
+
+.acc-name {
+    rgba(24, 37, 43, 0.7);
+}
