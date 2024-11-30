@@ -509,8 +509,109 @@ function t_onFuncLoad(funcName,okFunc,time) {if(typeof window[funcName]==='funct
                         <div class="order-block-value">1 взрослый, 1 ребёнок</div>
                     </div>
                 </div>
-                <div class="country-info">
+                <div class="additional-info">
+                    <div class="flag-block">
+                        <div class="flag"></div>
+                    </div>
+                    <div class="margin-flag">
+                        RUB
+                    </div>
+                </div>
+            </div>
+            <div class="booking-block">
+                <div class="booking-header-reg">
+                    <div class="booking-header-text">
+                        Введите данные
+                    </div>
+                </div>
+                <div class="booking-block-reg">
+                    <div class="booking-block-data">
+                        <div class="bb-head">
+                            <div class="bb-data-label">Введите свои данные</div>
+                        </div>
+                        <div class="bb-reg">
+                            <div class="name-and-surname">
+                                <input type="text" placeholder="Фамилия" class="styled-input" id="surname" />
+                                <input type="text" placeholder="Имя" class="styled-input" id="name" />
+                            </div>
+                            <div class="middle_name_and_sex">
+                                <div class="inp">
+                                    <input type="text" placeholder="Отчество" class="styled-input" id="middle_name"/>
+                                </div>
+                                <div class="sex_type">
+                                    <div class="sex_label">Пол</div>
+                                    <div class="sex_buttons">
+                                        <button class="sex-button" id="male">Мужской</button>
+                                        <button class="sex-button" id="female">Женский</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="number_and_mail">
+                                <div class="input-container">
+                                    <input type="text" placeholder="Номер телефона" class="styled-input" id="number" />
+                                </div>
+                                <div class="input-container">
+                                    <input type="text" placeholder="Электронная почта" class="styled-input" id="mail" />
+                                </div>
+                            </div>
+                            <div class="confirm">
+                                <input type="checkbox" id="confirm-number" class="styled-checkbox" />
+                                <div class="label-confirm">
+                                    Пришлите мне подтверждение на телефон
+                                </div>
+                            </div>
+                            <div class="confirm">
+                                <input type="checkbox" id="confirm-news" class="styled-checkbox" />
+                                <div class="label-confirm">
+                                    Я хочу узнавать о специальных предложениях и новостях
+                                </div>
+                            </div>
+                        </div>
 
+                    </div>
+                    <div class="booking-block-f">
+                        <div class="bb-f-header">
+                            <div class="bb-f-label">
+                                Ваше бронирование
+                            </div>
+                        </div>
+                        <div class="bb-f-count">
+                            1 ночь
+                        </div>
+                        <div class="checkinout">
+                            <div class="data" id="in">
+                                <div class="date">30 ноября
+                                    <div class="dash"> — </div>
+                                </div>
+                                <div class="day-of-week">Суббота</div>
+                                <div class="time">C 14:00</div>
+                            </div>
+                            <div class="data" id="out">
+                                <div class="date">1 декабря</div>
+                                <div class="day-of-week">Воскресенье</div>
+                                <div class="time">До 12:00</div>
+
+                            </div>
+                        </div>
+                        <div class="room">
+                            <div class="room__label">Номер:</div>
+                            <div class="room__desc">Cтандартный номер с большой двуспальной кроватью</div>
+                        </div>
+                        <div class="total_price">
+                            <div class="total_price_block">
+                                <div class="total_price_label">
+                                    Итого
+                                </div>
+                                <div class="total_price_value">
+                                    8 000
+                                    <span>₽</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-block">
+                            <button class="btn-to-pay">Забронировать</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1046,5 +1147,6 @@ function t_onFuncLoad(funcName,okFunc,time) {if(typeof window[funcName]==='funct
                 </div>
             </div>
     </footer> <!--/footer--> </div> <!--/allrecords--> <!-- Stat --> <!-- Yandex.Metrika counter 20363329 -->
+    <script src="{% static 'order/js/sex_buttons_active.js' %}"></script>
 </body>
 </html>
