@@ -60,17 +60,30 @@ body {
     .number_and_mail {
         flex-direction: column;
     }
+
+    .order-block {
+        width: 100%;
+    }
 }
 
 @media (max-width: 860px) {
     .additional-info {
         display: none !important;
     }
+
+    .booking__label {
+        font-size: 30px !important;
+    }
 }
 
 @media (max-width: 902px) {
     .container {
         width: 95% !important;
+    }
+
+    .booking__label {
+        font-size: 40px !important;
+        padding: 5px;
     }
 }
 
@@ -87,11 +100,19 @@ body {
     .booking-block-f {
         width: 100%;
     }
+
+    .booking__label {
+        font-size: 50px !important;
+    }
 }
 
 @media (max-width: 1140px) {
     .container {
         width: 90%;
+    }
+
+    .booking__label {
+        font-size: 60px;
     }
 }
 
@@ -472,4 +493,8 @@ body {
     width: 100%;
     box-sizing: border-box; /* Включает padding и border в указанную ширину */
 
+}
+
+.zoom-logo {
+    zoom: 1.203 !important;
 }
