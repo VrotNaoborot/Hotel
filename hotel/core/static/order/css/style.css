@@ -492,7 +492,11 @@ body {
     flex-grow: 1;
     width: 100%;
     box-sizing: border-box; /* Включает padding и border в указанную ширину */
+}
 
+.btn-to-pay:hover {
+    opacity: 0.7; /* Уменьшаем непрозрачность при наведении */
+    cursor: pointer;
 }
 
 .zoom-logo {

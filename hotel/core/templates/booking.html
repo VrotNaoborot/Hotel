@@ -1,6 +1,7 @@
 ﻿<html xmlns="http://www.w3.org/1999/html">
 <head>
     {% load static %}
+    {% load custom_filters %}
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,6 +29,8 @@
           href="{% static 'booking/img/tild3665-3839-4236-b034-376336613166/favicon_black.png' %}">
     <!-- Assets -->
     <script src="{% static 'booking/js/tilda-fallback-1.0.min.js' %}" async="" charset="utf-8"></script>
+    <script src="{% static 'booking/js/card.js' %}"></script>
+    <script src="{% static 'booking/js/card_detail.js' %}"></script>
     <link rel="stylesheet" href="{% static 'booking/css/tilda-grid-3.0.min.css' %}" type="text/css" media="all"
           onerror="this.loaderr='y';">
     <link rel="stylesheet" href="{% static 'booking/ws/project5868788/tilda-blocks-page30032947.min.css' %}"
@@ -63,8 +66,7 @@ function t_onFuncLoad(funcName,okFunc,time) {if(typeof window[funcName]==='funct
             onerror="this.loaderr='y';"></script>
     <script src="{% static 'booking/js/tilda-events-1.0.min.js' %}" charset="utf-8" async=""
             onerror="this.loaderr='y';"></script>
-    <script src="{% static 'booking/js/card.js' %}" charset="utf-8" async=""
-            onerror="this.loaderr='y';"></script>
+
     <!-- nominify begin --><!-- start TL head script -->
     <script type="text/javascript">
         (function(w) {
@@ -555,18 +557,18 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();
 
         </div>
         <div class="cust-catalog-body">
-
-            <div class="cust-card">
+            {% for category in categories %}
+            <div class="cust-card" id="{{ category.id }}">
                 <div class="cust-card-top">
                     <div class="cust-card-i">
                         <div class="cust-card-first active image image-1"
-                             style="background-image: url('https://secure.travelline.ru/resource/thumb/1000x700/rt/140668/637804531904697913-0a8b59be-d412-4bc2-a6de-311c24235a3b');"></div>
+                             style="background-image: url('{{ category.img1.url }}');"></div>
                         <div class="cust-card-first image image-2"
-                             style="background-image: url('https://secure.travelline.ru/resource/thumb/1000x700/rt/140668/637602292179914433-6b6589cc-4164-46f0-896a-22d03337ae14');"></div>
+                             style="background-image: url('{{ category.img2.url }}');"></div>
                         <div class="cust-card-first image image-3"
-                             style="background-image: url('https://secure.travelline.ru/resource/thumb/1000x700/rt/140668/637804519263991110-27ac561a-ad73-4772-a922-6dc604eb83c7');"></div>
+                             style="background-image: url('{{ category.img3.url }}');"></div>
                         <div class="cust-card-first image image-4"
-                             style="background-image: url('https://secure.travelline.ru/resource/thumb/1000x700/rt/140668/637602292181308622-daeec7b9-5989-4b0c-9aef-81a336231416');"></div>
+                             style="background-image: url('{{ category.img4.url }}');"></div>
                     </div>
                     <div class="blocks">
                         <div class="block active" data-target="1"></div>
@@ -577,7 +579,7 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();
                 </div>
                 <div class="cust-card-bottom">
                     <div class="cust-card-name">
-                        Стандартный номер с большой двухспальной кроватью
+                        {{ category.name }}
                     </div>
                     <div class="cust-card-info">
                         <div class="property">
@@ -587,7 +589,7 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();
                             </svg>
                             <div class="property__label">
                                 до
-                                <value>2</value>
+                                <value>{{ category.capacity }}</value>
                                 мест
                             </div>
                         </div>
@@ -597,7 +599,7 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();
                                       d="M12.396 4.5H9V3h6v6h-1.5V5.517l-7.953 8.037H9v1.5H3V9h1.5v3.48l7.896-7.98z"></path>
                             </svg>
                             <div class="property__label">
-                                25 м²
+                                {{ category.space }} м²
                             </div>
                         </div>
                         <div class="property">
@@ -607,7 +609,7 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();
                                       fill="currentColor"></path>
                             </svg>
                             <div class="property__label">
-                                1 комн.
+                                {{ category.count_room }} комн.
                             </div>
                         </div>
                     </div>
@@ -616,8 +618,7 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();
                             <div class="cust-card-price">
                                 <div class="cust-card-price-i">
                                     <span class="lower-word">от </span>
-                                    <span class="price-value">12 000</span>
-                                    <span class="value-price">₽</span>
+                                    <span class="price-value">{{ category.min_price|thousand_separator }}</span>                                        <span class="value-price">₽</span>
                                 </div>
                                 <div class="cust-card-room-info">
                                     <div class="number-night">1 ночь</div>
@@ -630,11 +631,7 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();
                     </div>
                 </div>
             </div>
-
-            <div class="cust-card">Карточка 1</div>
-            <div class="cust-card">Карточка 2</div>
-            <div class="cust-card">Карточка 3</div>
-            <div class="cust-card">Карточка 4</div>
+            {% endfor %}
         </div>
 
     </div>

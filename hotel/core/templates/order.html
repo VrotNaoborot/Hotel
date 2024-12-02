@@ -1,6 +1,7 @@
 <html xmlns="http://www.w3.org/1999/html">
 <head>
     {% load static %}
+    {% load custom_filters %}
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -133,11 +134,11 @@ function t_onFuncLoad(funcName,okFunc,time) {if(typeof window[funcName]==='funct
                 <div class="order-info">
                     <div class="order-block" id="checkin-checkout">
                         <div class="order-block-name">Заезд —  Выезд</div>
-                        <div class="order-block-value">28 ноября — 29 ноября</div>
+                        <div class="order-block-value">{{ check_in_formatted }} — {{ check_out_formatted }}</div>
                     </div>
                     <div class="order-block" id="guests">
                         <div class="order-block-name">Гости</div>
-                        <div class="order-block-value">1 взрослый, 1 ребёнок</div>
+                        <div class="order-block-value">{{ adults_word }}, {{ child_word }}</div>
                     </div>
                 </div>
                 <div class="additional-info">
@@ -211,26 +212,26 @@ function t_onFuncLoad(funcName,okFunc,time) {if(typeof window[funcName]==='funct
                             </div>
                         </div>
                         <div class="bb-f-count">
-                            1 ночь
+                            {{ nights_word }}
                         </div>
                         <div class="checkinout">
                             <div class="data" id="in">
-                                <div class="date">30 ноября
+                                <div class="date">{{ check_in_formatted }}
                                     <div class="dash"> — </div>
                                 </div>
-                                <div class="day-of-week">Суббота</div>
+                                <div class="day-of-week">{{ check_in_day_of_week }}</div>
                                 <div class="time">C 14:00</div>
                             </div>
                             <div class="data" id="out">
-                                <div class="date">1 декабря</div>
-                                <div class="day-of-week">Воскресенье</div>
+                                <div class="date">{{ check_out_formatted }}</div>
+                                <div class="day-of-week">{{ check_out_day_of_week }}</div>
                                 <div class="time">До 12:00</div>
 
                             </div>
                         </div>
                         <div class="room">
                             <div class="room__label">Номер:</div>
-                            <div class="room__desc">Cтандартный номер с большой двуспальной кроватью</div>
+                            <div class="room__desc">{{ category.name }}</div>
                         </div>
                         <div class="total_price">
                             <div class="total_price_block">
@@ -238,7 +239,7 @@ function t_onFuncLoad(funcName,okFunc,time) {if(typeof window[funcName]==='funct
                                     Итого
                                 </div>
                                 <div class="total_price_value">
-                                    8 000
+                                    {{ category.min_price|thousand_separator }}
                                     <span>₽</span>
                                 </div>
                             </div>

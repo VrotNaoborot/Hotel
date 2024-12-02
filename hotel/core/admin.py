@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django import forms
-from .models import CategoryRoom
+from .models import CategoryRoom, Room, Booking
 
 # Список доступных удобств
 AVAILABLE_AMENITIES = [
@@ -9,7 +9,6 @@ AVAILABLE_AMENITIES = [
     "Телевизор",
     "Холодильник",
     "Сейф",
-    "Душ",
 ]
 
 
@@ -36,3 +35,5 @@ class CategoryRoomAdmin(admin.ModelAdmin):
 
 
 admin.site.register(CategoryRoom, CategoryRoomAdmin)
+admin.site.register(Room)
+admin.site.register(Booking)

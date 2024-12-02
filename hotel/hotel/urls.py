@@ -17,11 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from core.views import *
+from django.conf.urls.static import static
+from . import settings
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', main),
-    path('booking', booking),
-    path('card_detail', card_detail),
-    path('order', order)
-]
+    path('booking', booking, name='booking'),
+    path('card_detail/<int:id>/', card_detail, name='card_detail'),
+    path('card_detail/<int:id>/order', order, name='order'),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

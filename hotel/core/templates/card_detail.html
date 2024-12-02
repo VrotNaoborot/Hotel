@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
     {% load static %}
+    {% load custom_filters %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Стандартный номер</title>
@@ -9,17 +10,17 @@
 </head>
 <body>
     <div class="container">
-        <div class="title">Стандартный номер с большой двуспальной кроватью</div>
+        <div class="title">{{ category.name }}</div>
         <div class="photo-container">
             <div class="photo-large">
-                <div class="availability">Осталось 3 номера</div>
-                <img src="{% static 'card_detail/img/info1.jpg' %}" alt="Большая фотография">
+                <div class="availability">Осталось {{ count_rooms }}</div>
+                <img src="{{ category.img1.url }}" alt="Большая фотография">
             </div>
             <div class="photo-grid">
-                <img src="{% static 'card_detail/img/info2.jpeg' %}" alt="Фото 1">
-                <img src="{% static 'card_detail/img/info3.jpg' %}" alt="Фото 2">
-                <img src="{% static 'card_detail/img/info1.jpg' %}" alt="Фото 3">
-                <img src="{% static 'card_detail/img/info1.jpg' %}" alt="Фото 4">
+                <img src="{{ category.img2.url }}" alt="Фото 1">
+                <img src="{{ category.img3.url }}" alt="Фото 2">
+                <img src="{{ category.img4.url }}" alt="Фото 3">
+                <img src="{{ category.img5.url }}" alt="Фото 4">
             </div>
         </div>
         <div class="case-info">
@@ -33,7 +34,7 @@
                             </svg>
                             <div class="property__label">
                                 Вместимость до
-                                <value>2</value>
+                                <value>{{ category.capacity }}</value>
                                 мест
                             </div>
                         </div>
@@ -45,7 +46,7 @@
                                       d="M12.396 4.5H9V3h6v6h-1.5V5.517l-7.953 8.037H9v1.5H3V9h1.5v3.48l7.896-7.98z"></path>
                             </svg>
                             <div class="property__label">
-                                25 м²
+                                {{ category.space }} м²
                             </div>
                         </div>
                         <div class="property">
@@ -55,12 +56,13 @@
                                       fill="currentColor"></path>
                             </svg>
                             <div class="property__label">
-                                1 комн.
+                                {{ category.count_room }} комн.
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="features">
+                    {% if 'Wi-Fi' in category.amenities %}
                     <div class="feature-block">
                         <svg class="feature-img">
                             <path d="M19.302 10.812c.205.181.517.18.71-.013l1.463-1.463a.484.484 0 00-.003-.696C19.092 6.405 15.645 5 11.81 5 7.976 5 4.53 6.405 2.15 8.64a.484.484 0 00-.004.696l1.463 1.463a.518.518 0 00.71.013C6.283 9.067 8.916 8 11.81 8c2.895 0 5.528 1.067 7.492 2.812z" fill="currentColor"></path><path d="M17.87 12.94c.2-.2.195-.529-.023-.71-1.678-1.4-3.769-2.23-6.037-2.23-2.267 0-4.359.83-6.036 2.23a.481.481 0 00-.023.71l1.365 1.366c.182.182.47.195.678.044C8.974 13.49 10.347 13 11.81 13c1.464 0 2.836.492 4.017 1.35a.524.524 0 00.678-.044l1.365-1.365zM14.224 15.842c.232.17.24.505.037.708l-2.097 2.097a.5.5 0 01-.707 0L9.36 16.55c-.203-.203-.195-.538.037-.708.739-.542 1.555-.842 2.413-.842.859 0 1.675.3 2.414.842z" fill="currentColor"></path>
@@ -69,7 +71,9 @@
                             Wi-Fi
                         </div>
                     </div>
+                    {% endif %}
 
+                    {% if 'Кондиционер' in category.amenities %}
                     <div class="feature-block">
                         <svg class="feature-img">
                             <path d="M17.5 8a.5.5 0 000-1h-2a.5.5 0 000 1h2z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M17.983 13H20.8a.2.2 0 00.2-.2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6.8c0 .11.09.2.2.2h2.817A1.2 1.2 0 007.2 14h9.6a1.2 1.2 0 001.183-1zM19 11V6H5v5h1v-.8A1.2 1.2 0 017.2 9h9.6a1.2 1.2 0 011.2 1.2v.8h1zM8 12v-1h8v1H8z" fill="currentColor"></path><path d="M12 15a1 1 0 011 1v4a1 1 0 11-2 0v-4a1 1 0 011-1zM8 15a1 1 0 011 1v2a3 3 0 01-3 3H5a1 1 0 110-2h1a1 1 0 001-1v-2a1 1 0 011-1zM16 15a1 1 0 011 1v2a1 1 0 001 1h1a1 1 0 110 2h-1a3 3 0 01-3-3v-2a1 1 0 011-1z" fill="currentColor"></path>
@@ -78,7 +82,9 @@
                             Кондиционер
                         </div>
                     </div>
+                    {% endif %}
 
+                    {% if 'Телевизор' in category.amenities %}
                     <div class="feature-block">
                         <svg class="feature-img">
                             <path d="M6.02 11a1 1 0 011-1h3a1 1 0 011 1v2h-5v-2zM13.02 11a1 1 0 011-1h3a1 1 0 011 1v2h-5v-2z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M10.438 2.851a2 2 0 013.124 0L16.48 6.5H19a2 2 0 012 2V14a1 1 0 011 1v6a1 1 0 11-2 0v-1H4v1a1 1 0 11-2 0v-6a1 1 0 011-1V8.5a2 2 0 012-2h2.52l2.918-3.649zM5 14h14V8.5h-2.52a2 2 0 01-1.561-.75L12 4.1 9.081 7.75a2 2 0 01-1.562.75H5V14zm15 4v-1H4v1h16z" fill="currentColor"></path>
@@ -87,7 +93,9 @@
                             Большая кровать
                         </div>
                     </div>
+                    {% endif %}
 
+                    {% if 'Сейф' in category.amenities %}
                     <div class="feature-block">
                         <svg class="feature-img">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M16 11a2 2 0 11-4 0 2 2 0 014 0zm-1 0a1 1 0 11-2 0 1 1 0 012 0z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M7 6h11v10H7v-1h.5a.5.5 0 000-1H7V8h.5a.5.5 0 000-1H7V6zm10 5a3 3 0 11-6 0 3 3 0 016 0z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v15a1 1 0 01-1 1h-1a1 1 0 11-2 0H7a1 1 0 11-2 0H4a1 1 0 01-1-1V4zm3 11v1a1 1 0 001 1h11a1 1 0 001-1V6a1 1 0 00-1-1H7a1 1 0 00-1 1v1h-.5a.5.5 0 000 1H6v6h-.5a.5.5 0 000 1H6z" fill="currentColor"></path>
@@ -96,7 +104,9 @@
                             Сейф
                         </div>
                     </div>
+                    {% endif %}
 
+                    {% if 'Телефон' in category.amenities %}
                     <div class="feature-block">
                         <svg class="feature-img">
                             <path d="M4 5a1 1 0 00-1 1v12a1 1 0 001 1h2a1 1 0 001-1V6a1 1 0 00-1-1H4z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M9 6a1 1 0 00-1 1v11a1 1 0 001 1h11a1 1 0 001-1V7a1 1 0 00-1-1H9zm1.2 5a.2.2 0 00-.2.2v4.6c0 .11.09.2.2.2h2.6a.2.2 0 00.2-.2v-4.6a.2.2 0 00-.2-.2h-2.6zm3.8.5a.5.5 0 01.5-.5h1a.5.5 0 010 1h-1a.5.5 0 01-.5-.5zm.5 1.5a.5.5 0 000 1h1a.5.5 0 000-1h-1zm-.5 2.5a.5.5 0 01.5-.5h1a.5.5 0 010 1h-1a.5.5 0 01-.5-.5zm3.5-4.5a.5.5 0 000 1h1a.5.5 0 000-1h-1zm-.5 2.5a.5.5 0 01.5-.5h1a.5.5 0 010 1h-1a.5.5 0 01-.5-.5zm.5 1.5a.5.5 0 000 1h1a.5.5 0 000-1h-1zM10 8.2c0-.11.09-.2.2-.2h8.6c.11 0 .2.09.2.2v1.6a.2.2 0 01-.2.2h-8.6a.2.2 0 01-.2-.2V8.2z" fill="currentColor"></path>
@@ -105,6 +115,7 @@
                             Телефон
                         </div>
                     </div>
+                    {% endif %}
                 </div>
             </div>
             <div class="case-info-right">
@@ -227,6 +238,10 @@
                 </div>
             </div>
         </div>
+
+        <div class="btn-order">От {{ category.min_price|thousand_separator }} ₽ </div>
+
     </div>
+    <script src="{% static 'card_detail/js/btn.js' %}"></script>
 </body>
 </html>

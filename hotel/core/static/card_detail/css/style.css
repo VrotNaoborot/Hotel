@@ -200,3 +200,30 @@ body {
 .acc-name {
     rgba(24, 37, 43, 0.7);
 }
+
+
+
+.btn-order {
+    border: 0;
+    background-color: rgb(103, 190, 67);
+    padding: 20px 30px;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    flex-grow: 1;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+@keyframes jump {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.btn-order:hover {
+    cursor: pointer;
+    animation: jump 0.5s ease-in-out; /* Прыжок при наведении */
+    opacity: 0.7; /* Уменьшаем непрозрачность при наведении */
+}
